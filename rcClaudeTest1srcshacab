@@ -1,0 +1,9 @@
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+core.worktree=D:\src\ClaudeTest1\src\shacab
+remote.origin.url=https://github.com/jeremyscully/shacab.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
