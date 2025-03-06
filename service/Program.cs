@@ -163,11 +163,15 @@ void MapUserEndpoints(WebApplication app)
     var group = app.MapGroup("/api/users");
 
     // Get all users
-    group.MapGet("/", async (IUserRepository repository, [FromQuery] bool includeInactive = false, [FromQuery] string? searchTerm = null, [FromQuery] string? department = null, [FromQuery] int? roleId = null) =>
+    group.MapGet("/", async (IUserRepository repository, [FromQuery] bool includeInactive, [FromQuery] string? searchTerm, [FromQuery] string? department, [FromQuery] int? roleId) =>
     {
         try
         {
-            var users = await repository.GetAllUsersAsync(includeInactive, searchTerm, department, roleId);
+            var users = await repository.GetAllUsersAsync(
+                includeInactive: includeInactive, 
+                searchTerm: searchTerm, 
+                department: department, 
+                roleId: roleId);
             return Results.Ok(users);
         }
         catch (Exception ex)
