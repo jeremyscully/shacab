@@ -1,0 +1,48 @@
+:root {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Calendar styles */
+.rbc-calendar {
+  min-height: 600px;
+}
+
+.rbc-event {
+  background-color: #1976d2;
+}
+
+.rbc-event.draft {
+  background-color: #757575;
+}
+
+.rbc-event.submitted {
+  background-color: #ff9800;
+}
+
+.rbc-event.inreview {
+  background-color: #2196f3;
+}
+
+.rbc-event.approved {
+  background-color: #4caf50;
+}
+
+.rbc-event.rejected {
+  background-color: #f44336;
+}
+
+.rbc-event.implemented {
+  background-color: #9c27b0;
+}
+
+.rbc-event.closed {
+  background-color: #607d8b;
+} 
